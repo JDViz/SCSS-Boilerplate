@@ -8,9 +8,9 @@
 /* UTILITIES & ABSTRACTS */
 // Holds Sass tools, helper files, variables, functions, mixins and other config files.
 // These files are meant to be just helpers which don’t output any CSS when compiled.
-@import "10_utilities/variables";
-@import "10_utilities/functions";
-@import "10_utilities/mixins";
+@use "10_utilities/variables";
+@use "10_utilities/functions";
+@use "10_utilities/mixins";
 
 /* **************************************************************************************************************** */
 /* VENDOR OVERRIDES */
@@ -19,26 +19,26 @@
 // If this is required, its good practice to create a new folder called vendors-extensions/ and then name any files
 // after the vendors they overwrite. The filevendors-extensions/_bootstrap.scss would contain all your
 // Bootstrap overrides — as editing the vendor files themselves, isn’t generally a good idea.
-@import "70_vedor_overrides/bootstrap_override";
+@use "70_vedor_overrides/bootstrap_override";
 
 /* **************************************************************************************************************** */
 /* BASE */
 // Holds the boilerplate code for the project.
 // Including standard styles such as resets and typographic rules,
 // which are commonly used throughout your project.
-@import "20_base/reset";
-@import "20_base/typo_fonts";
+@use "20_base/reset";
+@use "20_base/typo_fonts";
 
 /* **************************************************************************************************************** */
 /* LAYOUT */
 // Contains all styles involved with the layout of your project.
 // Such as styles for your header, footer, navigation and the grid system.
-@import "40_layout/navigation";
-@import "40_layout/grid";
-@import "40_layout/header";
-@import "40_layout/footer";
-@import "40_layout/sidebar";
-@import "40_layout/forms";
+@use "40_layout/navigation";
+@use "40_layout/grid";
+@use "40_layout/header";
+@use "40_layout/footer";
+@use "40_layout/sidebar";
+@use "40_layout/forms";
 
 /* **************************************************************************************************************** */
 /* COMPONENTS (or modules) */
@@ -46,26 +46,26 @@
 // and similar page components (think widgets).
 // Your project will typically contain a lot of component files
 // — as the whole site/app should be mostly composed of small modules.
-@import "30_components/buttons";
-@import "30_components/cards";
-@import "30_components/carousel";
-@import "30_components/sliders";
+@use "30_components/buttons";
+@use "30_components/cards";
+@use "30_components/carousel";
+@use "30_components/sliders";
 
 /* **************************************************************************************************************** */
 /* PAGES */
 // Any styles specific to individual pages will sit here.
 // For example it’s not uncommon for the home page of your site to require
 // page specific styles that no other page receives.
-@import "50_pages/home";
-@import "50_pages/general_sub";
-@import "50_pages/about";
-@import "50_pages/contact";
+@use "50_pages/home";
+@use "50_pages/general_sub";
+@use "50_pages/about";
+@use "50_pages/contact";
 
 /* **************************************************************************************************************** */
 /* THEMES */
 // This is likely not used in many projects.
 // It would hold files that create project specific themes.
 // For example if sections of your site contain alternate color schemes.
-@import "60_themes/theme";
-@import "60_themes/admin";
+@use "60_themes/theme";
+@use "60_themes/admin";
 
